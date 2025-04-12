@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(20, 28, 47);
+  min-height: 100vh;
+}
+
+.task-card {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 cursor-grab active:cursor-grabbing;
+  touch-action: none;
+}
+
+.task-card:hover {
+  @apply bg-gray-50;
+}
+
+.kanban-column {
+  @apply bg-[#ebecf0] rounded-lg p-3 min-h-[calc(100vh-12rem)] flex-shrink-0;
+  width: 272px;
+}
+
+.kanban-column-header {
+  @apply text-[#172b4d] font-semibold text-sm px-2 mb-2;
+}
+
+.add-card-button {
+  @apply w-full mt-2 flex items-center gap-1 px-2 py-1.5 text-[#172b4d] hover:bg-[#dfe1e6] rounded-md transition-colors duration-200 text-sm;
+}
